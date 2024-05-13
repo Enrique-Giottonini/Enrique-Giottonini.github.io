@@ -1,5 +1,5 @@
 ---
-title: Encora Spark Week 2. APPRENTICE TECHNICAL LOG DOC
+title: Encora Spark Week 2. Apprentice Technical Doc Log (WIP)
 date: 2024-05-13
 math: true
 ---
