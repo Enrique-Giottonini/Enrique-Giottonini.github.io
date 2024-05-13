@@ -1,16 +1,16 @@
 ---
-title: Spark Week 2. Module together.
+title: Encora Spark Week 2. Module together.
 date: 2024-05-13
 math: true
 ---
+
+This week I finally met my team in their element, solving technical problems.
 
 # Takeaways of the week
 
 - It's time to master my tools
 - The importance of communication
 - Hacking solutions with my team
-
-Make sure you're answering what did you learned and how can you implement those new learnings in the near future.
 
 # Mastering my tools
 
@@ -56,6 +56,6 @@ We were assigned two hard leetcode problems, and two mediums, in four programmin
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) _mid_
 - [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) _hard_
 
-I'm not particularly good at this type of problems, since I tend to overanalyze them in interviews. But we were given enough time to explore them.
+I must admit that I don't consider myself particularly strong in solving this type of problem under pressure, especially during interviews where I tend to overthink and overanalyze.
 
-Our approach was to solve them as a team using JavaScript as it was the language we langauge we all could understand. It was similar to pair programming, as we brainstormed and one person was ...
+I will share my technical insights and solution in a separate post. For now, I want to highlight the benefits of attacking problems as a team. I found it incredibly enjoyable to collaborate with my teammates on these challenges. Communicating on a technical level helped me understand my teammates better and vice versa, as is our element. I could sense how their thought processes differed from mine, what nuances they paid attention to, and what they overlook. Similarly, they provided clarity on aspects that I tended to overlook.
