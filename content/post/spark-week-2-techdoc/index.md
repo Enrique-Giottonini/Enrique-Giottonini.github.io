@@ -143,7 +143,7 @@ This solution uses an array for efficient lookup O(1), taking advantage of the c
 
 “Given a string `s`, find the length of the longest substring without repeating characters.”
 Constraints:
-{{< math>}} $0 <= |s| <= 5 * 10^4$ {{< /math}}
+
 `s` consists of English letters, digits, symbols and spaces.
 
 ### Solution
