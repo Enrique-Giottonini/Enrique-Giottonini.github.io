@@ -11,7 +11,7 @@ last_name: Giottonini Herrera
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: ☀️
 
 # Is this the primary user of the site?
 superuser: true
@@ -113,5 +113,5 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I'm an apprentice in its journey in the tech industry. My interests include scalable distributed systems, the advances of GenAI with large language models, and the practical limits of computability. I'm currently focusing in becoming a software engineer with strong foundations in computer science.
+I'm an apprentice in his journey in the tech industry. My interests include scalable distributed systems, the advances of GenAI with large language models, and the practical limits of computability. I'm currently focusing in becoming a software engineer with strong foundations in computer science.
 {style="text-align: justify;"}
