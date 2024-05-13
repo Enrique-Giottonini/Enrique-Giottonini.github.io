@@ -30,7 +30,7 @@ A (LRU) cache provides a fast lookup and retrieval storage with limited capacity
 
 For efficient lookup, we will utilize an array-based cache, where each index corresponds to a key, and A[i] points to a data structure storing the associated value. To maintain the temporal order of elements, we use a doubly linked list. Each time an element is added or accessed, it is moved to the head of the list, implicitly shifting the other elements back. This modification has a constant time complexity since we only need to update the 'next' and 'prev' pointers of the affected elements. When it comes to evicting an element, we simply remove the current tail of the list. Nodes will be structured as follow:
 
-```
+```javascript
 Node {
   key
 	value
@@ -41,7 +41,7 @@ Node {
 
 We define a Node data structure to represent each element in the cache, where 'key' and 'value' are integers, and 'next' and 'prev' are pointers to other nodes or null. Our cache will be an array of these nodes:
 
-```
+```javascript
 Cache = [Node_0, Node_1, ..., Node_10_000]
 ```
 
@@ -49,7 +49,7 @@ To initialize the cache, we allocate memory for the array, set references to the
 
 To facilitate the put and get operations, we need two auxiliary functions to manage the doubly linked list. Each time an element is added or accessed; it will be `pushedToHead`. There are four cases to consider:
 
-```
+```javascript
 function pushToHead(node) {
   // 1. first new element
   if (head == null || tail == null) {
@@ -81,7 +81,7 @@ function pushToHead(node) {
 
 We also need a function to delete the tail as follow:
 
-```
+```javascript
 function popTail() {
   if (tail == null) return -1;
   if (tail == head) {
@@ -100,7 +100,7 @@ The reason we are returning the key is because once the tail is deleted, we need
 
 With these two auxiliary functions, the call to ‘get’ gets trivial:
 
-```
+```javascript
 function get(int key) {
  	node = cache[key];
  	if (node == null) {
@@ -113,7 +113,7 @@ function get(int key) {
 
 And the call of ‘put’ only deals with two cases:
 
-```
+```javascript
 function put(int key, int value) {
   node = cache[key];
   if (node != null) { 		// 1. Element already exists
