@@ -39,7 +39,7 @@ I planned my work by reviewing and clarifying requirements, breaking down requir
 I learned about the concept of "spikes" in kanban boards and created a kanban board in a blank page to track my progress.
 
 This is how my kanban board ended up like:
-![Kanban Board](/images/week3-kanban.png)
+![Kanban Board](images/week3-kanban.png)
 
 # React revisited
 
@@ -169,6 +169,6 @@ export function NewTaskModal() {
     </>
 ```
 The results looks good to me, so now I can close this Spike.
-![New Task Modal](/images/w3-newtask.png)
+![New Task Modal](images/w3-newtask.png)
 
 This week was a great learning experience, and I'm excited to continue working on my project.
