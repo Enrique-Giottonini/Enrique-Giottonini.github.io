@@ -2,6 +2,7 @@
 title: Encora Spark Week 3. Breakable Toy - To Do App [1/2]
 date: 2024-05-19
 math: true
+
 ---
 
 # Takeaways from the week
@@ -39,7 +40,7 @@ I planned my work by reviewing and clarifying requirements, breaking down requir
 I learned about the concept of "spikes" in kanban boards and created a kanban board in a blank page to track my progress.
 
 This is how my kanban board ended up like:
-![Kanban Board](/static/uploads/week3-kanban.png)
+![Kanban Board](/uploads/week3-kanban.png)
 
 # React revisited
 
@@ -169,6 +170,6 @@ export function NewTaskModal() {
     </>
 ```
 The results looks good to me, so now I can close this Spike.
-![New Task Modal](/static/uploads/w3-newtask.png)
+![New Task Modal](/uploads/w3-newtask.png)
 
 This week was a great learning experience, and I'm excited to continue working on my project.
