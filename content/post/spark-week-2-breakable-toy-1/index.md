@@ -10,7 +10,7 @@ math: true
 - Project Planning for this week Assignment
 - React revisited
 
-Before receiving my assignment, I continued to explore topics in Skiena's "Algorithm Design". One blocker that had previously held me back from reading the book was the mental exhaustion that came with feeling like I needed to read the book from cover to cover. This time, I approached the book as a reference guide and went straight into a data structure that was essential for my previous assignment: *hashing*.
+Before receiving my assignment, I continued to explore topics in Skiena's "Algorithm Design". One blocker that had previously held me back from reading the book was the mental exhaustion that came with feeling like I needed to read the book from cover to cover. This time, I approached the book as a reference guide and went straight into a data structure that was important for my previous assignment: *hashing*.
 
 # Hashing
 Hash tables are a very practical way to maintain dictionaries, offering a nice constant time (or amortized constant time) for inserting, deleting, and searching items. They can be used to represent sets and maps (or dictionaries) with fast lookup. The `hash` is actually a function maps keys to integers, which represent the index of an array. 
@@ -18,7 +18,7 @@ Hash tables are a very practical way to maintain dictionaries, offering a nice c
 We could in theory create unique identifiers for each key, but the corresponding array will grow too large. To avoid memory issues in practice, we limit the size of the array to m slots/buckets/bins using a modulo operation. The goal is to distribute the n key mappings uniformly so that each slot has approximately n/m items.
 
 When two or more distincts keys are mapped to the same integer its called a collision.
-I learned about two ways to deal with them: chaining and open addressing. **Chaining** involves using an array of size m that points to the head of a linked list. Each time an element is added, it's put in the head of the hash(key) linked list. Searching an element involves searching the linked list of that key, which ideally should be amortized O(1) or n/m as m approaches n. **Open addressing**, on the other hand, keeps the hash table as an array of elements. If there are collisions, we traverse the array to find an empty slot.
+I learned about two ways to deal with them: chaining and open addressing. **(1) Chaining** involves using an array of size m that points to the head of a linked list. Each time an element is added, it's put in the head of the hash(key) linked list. Searching an element involves searching the linked list of that key, which ideally should be amortized O(1) or n/m as m approaches n. **(2) Open addressing**, on the other hand, keeps the hash table as an array of elements. If there are collisions, we traverse the array to find an empty slot.
 
 Chaining is more simple since its a combination of an array and growing linked list, but requires more memory overhead. In the other hand, open addressing makes the deletion of an element harder, as it might break a chain of insertions for keys that collides.
 
@@ -35,7 +35,7 @@ I received the functional requirements, and the technical requirements in: UI, M
 
 The project is not complex per se, but I plan to take my time, digging more than necessary into the tools.
 
-I planned my work by reviewing and clarifying requirements, breaking down requirements into tasks, estimating task durations, and implementing the frontend and backend. If the project was bigger I would also design a high-level architecture, and create user-stories. I was thinking about using [Atlassian](https://www.atlassian.com/) to track my progress since I heard is the way to go for most clients to manage and track progress, but I plan to check it later.
+I planned my work by reviewing and clarifying requirements, breaking down requirements into tasks, estimating task durations, and implementing the frontend and backend. If the project was bigger I would also design a high-level architecture, and create user-stories. I was thinking about using [Atlassian](https://www.atlassian.com/) to track my progress since I heard is the way to go for most, but I plan to check it later.
 I learned about the concept of "spikes" in kanban boards and created a kanban board in a blank page to track my progress.
 
 This is how my kanban board ended up like:
@@ -47,7 +47,7 @@ I revisited React and learned that components are just JavaScript functions that
 
 After reading the documentation I feel like I already knew the basics of React such as component composition and `useState`. But I'm lacking in more complex features of react like `useMem`, or `useCallback`.
 
-I created a modal component using React and learned about the useRef hook, which is used as a pointer/reference to a value that could change in the background but doesn't require a re-render. I also learned about useEffect hooks, which can be used to keep values in sync and run again if dependencies change.
+I created a modal component using React and learned about the useRef hook, which is used as a pointer/reference to a value that could change in the background but doesn't require a re-render. I also learned about `useEffect` hooks, which can be used to keep values in sync and run again if dependencies change.
 
 ## Example using vanilla JS and React
 To create a modal, I can use the HTML5 dialog components, which are suitable for creating modals that prevent user interaction with the page, such as alerts, notifications, forms, and non-modal elements like cookie preferences and preferences panels.
