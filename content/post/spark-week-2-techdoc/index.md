@@ -16,7 +16,7 @@ I will present my solutions to five coding challenges assigned to my team during
 - [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) _(hard)_
 - [Number of unequal triplets in aray](https://leetcode.com/problems/number-of-unequal-triplets-in-array/) _(easy)_
 
-For the "Medium" and "Hard" problems, we collaborated as a team, brainstorming together while one of us implemented the solution. The "Easy" problem was solved individually. I will describe each problem and its solution individually in this same blog.
+For the "Medium" and "Hard" problems, we collaborated as a team, brainstorming together while one of us implemented the solution. The "Easy" problem was solved individually. I will describe each problem and its solution individually in this same blog. You can find the `Java` implementation in the following [repo](https://github.com/Enrique-Giottonini/leet-code-solutions/tree/padawans2024-java)
 
 ## 1. LRU Cache _(medium)_
 
@@ -47,7 +47,7 @@ Cache = [Node_0, Node_1, ..., Node_10_000]
 
 To initialize the cache, we allocate memory for the array, set references to the head and tail of the doubly linked list, and initialize a counter to keep track of the number of elements in the cache, initially set to 0.
 
-To facilitate the put and get operations, we need two auxiliary functions to manage the doubly linked list. Each time an element is added or accessed; it will be `pushedToHead`. There are four cases to consider:
+To facilitate the put and get operations, we need two auxiliary functions to manage the doubly linked list. Each time an element is added or accessed; it will be `pushToHead`. There are four cases to consider:
 
 ```javascript
 function pushToHead(node) {
