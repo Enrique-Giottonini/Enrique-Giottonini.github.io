@@ -51,7 +51,7 @@ The most time consuming problem that I run into was that I knew what to test, bu
 
 The constant refactors made the tests very difficult to mantain, as I was in principle doing total rewrites of the state management. I lacked clarity in how I was going to connect the frontend with the backend. I was worrying too much into not triggering "unnecesary actions" to the backend (like a POST request for checking a todo task as done and a GET request for the update), that I ended up thinking of a complicated state, and weighting more complexity to my frontend than to my backend.
 
-In the other hand, when working with the backend, even though I had never used spring-boot (or Java for backend) I noticed a massive speed gain when not thinking in testing. I was implementing every API requirement, and "testing" the results calling the endpoint with _Podman_, giving me small victories instead of frustation fighting with the tests.
+In the other hand, when working with the backend, even though I had never used spring-boot (or Java for backend) I noticed a massive speed gain when not thinking in testing. I was implementing every API requirement, and "testing" the results calling the endpoint with _Postman_, giving me small victories instead of frustation fighting with the tests.
 
 Once I implemented all the API requirements, I learned how to tests the endpoints (or the Java Controller/Service) using _JUnit_ and _Spring MockMvc_. Refactors were made to cover edgecases, and improve readability, but the refactors were an order of magnitude faster than with frontend.
 
