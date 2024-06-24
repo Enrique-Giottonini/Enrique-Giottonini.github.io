@@ -1,5 +1,5 @@
 ---
-title: Encora Spark Week 7. Lighting Talks
+title: Encora Spark Week 7. Getting Certified! + Lighting Talk 1
 date: 2024-06-17
 math: true
 diagram: true
