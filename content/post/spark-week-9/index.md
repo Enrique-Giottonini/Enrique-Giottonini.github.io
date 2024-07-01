@@ -1,5 +1,5 @@
 ---
-title: Encora Spark Week 8. Getting Certified! + Final Ignite Talk
+title: Encora Spark Week 9. Getting Certified! + Final Ignite Talk
 date: 2024-07-01
 math: true
 diagram: true
