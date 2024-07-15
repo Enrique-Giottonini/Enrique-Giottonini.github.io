@@ -1,6 +1,6 @@
 ---
 title: Encora Spark Week 10. A Certification Journey
-date: 2024-07-01
+date: 2024-07-08
 math: true
 diagram: true
 ---
