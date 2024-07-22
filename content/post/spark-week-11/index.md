@@ -13,7 +13,7 @@ tl;dr: I've been working on getting to know what OSS is about, and how to be par
 2. [**Possible projects to work on in the next weeks**](#possible-projects-to-work-on-in-the-next-weeks)
 3. [**Java Backend Developer track**](#java-backend-developer-track)
 
-# **1. Insights from trying to contribute to an open-source project**
+# <a id=insights-from-trying-to-contribute-to-an-open-source-project></a>**1. Insights from trying to contribute to an open-source project**
 
 My objective for this week was to get a succesful Pull Request (PR) accepted into an open-source project. I didn't know where to start, and seeing the amount of contributors and contributions in a single project was overwhelming. Good thing that I was kindly provided with a list of readings from the Spark team, which helped me to understand the basics of how to contribute to a project.
 
@@ -40,7 +40,7 @@ As for now I'm in step six, I've found an issue that I think I can help with, an
 
 The project I'm contributing to is [Eclipse Collections](https://github.com/eclipse/eclipse-collections), a framework for Java with optimized data structures and a rich, functional and fluent API. I chose this project because I have an idea on how they extend the Java Collections API, and I quite undertood some of the codebase. It's an active repository, and have issues labeled as "good first issue" which means that they are looking for newbie contributors like me.
 
-# **2. Possible projects to work on in the next weeks**
+# <a id=possible-projects-to-work-on-in-the-next-weeks></a>**2. Possible projects to work on in the next weeks**
 
 I would like to work on the Eclipse Collections project but this time fixing a bug. Other projects that I'm interested are:
 
@@ -49,7 +49,7 @@ I would like to work on the Eclipse Collections project but this time fixing a b
 - Python - [Optuna](https://github.com/optuna/optuna): An automatic hyperparameter optimization framework, particularly designed for machine learning. I've used it before, and in theory is `for loops + cache`, but I would like to see how it works under the hood.
 - Python - [Scrapy](https://github.com/scrapy/scrapy): a fast high-level web crawling & scraping framework. I'm interested in learning how to scrape data from the web.
 
-# **3. Java Backend Developer track**
+# <a id=java-backend-developer-track></a>**3. Java Backend Developer track**
 
 I've been working on the Java Backend Developer track on [Hyperskill](https://hyperskill.org/tracks/12). The objective is to be able to complete the following projects:
 

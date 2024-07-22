@@ -5,155 +5,6 @@ math: true
 diagram: true
 ---
 
-<!-- APPRENTICE TECHNICAL LOG DOC
-
-Eclipse Collections 1st Pull Request: Fix bold markup typos in reference guide #1652
-
-
-
-Enrique Giottonini
-
-
-
-
-
-OVERVIEW
-
-As part of the Spark program's week 11 module, "Testing the open-source waters & fundamentals," I made a Pull Request (PR) to fix a simple typo issue in the Eclipse Collections project. My goal was to practice contributing to an open-source project for the first time.
-
-
-
-Eclipse Collections is an alternative collections library for Java, hosted by the Eclipse Foundation, which oversees multiple open-source projects. I discovered this project through the https://goodfirstissue.dev repository, which curates "good first issue" labels from various GitHub projects, inviting newcomers to contribute.
-
-
-
-The reason I chose to work in such a simple contribution is that my intention was solely to understand the process of pushing a pull request, getting it reviewed, and then merged.
-
-
-
-The PR has been approved and can be found here, and it’s already merged into the main repository.
-
-
-
-
-
-CONTEXT
-
-I was reading the reference guide in ` eclipse-collections/docs/2-Collection_Containers.adoc` to get an understanding of the API and work on an issue. I found a low-hanging fruit, someone left a bold symbol markup typo:
-
-
-
-
-
-I then ‘CTRL + F <<*>>’ in hopes of finding more typos of the same class, and I did find another one!
-
-
-
-SOLUTION
-
-
-
-I followed the Contributing Guide:
-
-
-
-I signed an agreement
-
-I forked the repository into my account.
-
-I created a local clone of the repo from the command line
-
-```
-
-git clone https://github.com/Enrique-Giottonini/eclipse-collections.git`
-	cd eclipse-collections
-
-```
-
-I configured the upstream remote (for pulling updates):
-
-```
-
-git remote add upstream https://github.com/eclipse/eclipse-collections.git
-
-```
-
-Sync my fork
-
-```
-
-git fetch –all
-
-git pull upstream master –rebase
-
-```
-
-I removed the unnecessary ‘*’ in the table and added a ‘*’ to the word ‘groupBy’ using vim.
-
-I committed the changes to fork; the signoff is the same account (using gh auth login) in which I signed the step one agreement.
-
-```
-
-git add .
-
-git commit --message "My commit message as per guidelines" --signoff
-
-```
-
-Repeated step five, with no merging conflicts
-
-``` git push``` to my fork.
-
-Used the GitHub GUI for making a PR from my fork.
-
-Wait for review
-
-I received an email when my contribution got accepted and then merged.
-
-  -->
-
-<!--
-  Spark Music Advisor
-A Java command line application to discover artists, albums, and categories; from Spotify trends.
-Functional Requirements
-Read two optional server points from command line arguments:
-`-access`: provide an authorization server path, with a default value of https://accounts.spotify.com
-`-resource`: should provide API server path, with a default value of https://api.spotify.com
-Read an optional configuration from command line arguments:
-`-page`: to paginate results with a default value of five
-an `auth` command that will print the auth link and allow us to use other commands. Commands are unavailable if user access for the program is not successful.
-a `featured` command that displays a list of Spotify-featured playlists with their links fetched from API, and paginated
-a `new` command that displays a list of new albums with artists and links on Spotify; same reqs
-a `categories` command that displays a list of all available categories on Spotify; same reqs
-a `playlists C_NAME`, where C_NAME is the name of a category. The list contains playlists of this category and their links on Spotify; same reqs
-an `exit` command that shuts down the application; same reqs
-the auth session should be kept alive as long as the application is running
-Engineering Requirements
-Using Spotify API
-Use http protocol
-In the `auth` command before printing the auth link (from the previous stage), you should start an HTTP server that will listen for the incoming requests. When the user confirms or rejects the authorization, the server should return the following text to the browser:
-"Got the code. Return back to your program." if the query contains the authorization code.
-"Authorization code not found. Try again." otherwise.
-After the code is received, the server must shut down and you should get `access_token` by making a POST request on ${authorization-server-path}/api/token
-and then print the result body
-Full documentation on how to work with api can be found at https://developer.spotify.com/documentation/web-api/reference/.
-Object model: https://developer.spotify.com/documentation/web-api/reference/object-model/
-To fetch resources use ${api-server-path}/v1/browse/{resource}
-To get all categories, use https://api.spotify.com/v1/browse/categories
-To get a playlist, use https://api.spotify.com/v1/browse/categories/{category_id}/playlists
-To get new releases, use https://api.spotify.com/v1/browse/new-releases
-To get featured playlists, use https://api.spotify.com/v1/browse/featured-playlists
-Pay attention to playlists. Make sure that inside the request you send category id, not category name! Category names can contain spaces or other invalid URL symbols. So you should request category ids and names before the playlists request and find the id by category name. If the id format is correct but you cannot find it in the list of ids, print "Unknown category name.".
-In case of invalid category id (contains invalid URL symbols) in playlist request or other API error, the program should output the error message from the Spotify response. For example, if you get the response {"error":{"status":404,"message":"Specified id doesn't exist"}}, you should print the following line: "Specified id doesn't exist"
-Use MVC architectural pattern
-(view) A CommandLineMusicAdvisor that implements a MusicAdvisorView interface
-(controller) A SpotifyAPIController that implements a MusicAdvisorController interface
-(model) beans
-Use design patterns:
-A Singleton for MusicAdvisorView implementation
-A Singleton for MusicAPIController implementation
-Possible decorator for MusicAdvisorView implementation? -->
-
 tl;dr: I got my first pull request accepted into an open-source project, Eclipse Collections, by fixing a simple typo in the reference guide. I also finished a first implementation of the Music Advisor project, a Java CLI application that uses the Spotify API to recommend music to the user.
 
 # **Index**
@@ -162,7 +13,7 @@ tl;dr: I got my first pull request accepted into an open-source project, Eclipse
 2. [**Authorization Code Flow**](#authorization-code-flow)
 3. [**Music Advisor Project**](#music-advisor-project)
 
-# **1. Anatomy of a first Pull Request**
+# <a id=anatomy-of-a-first-pull-request>**1. Anatomy of a first Pull Request** </a>
 
 I was reading the reference guide in `eclipse-collections/docs/2-Collection_Containers.adoc` to get an understanding of the API and work on an issue. I found a low-hanging fruit, someone left a bold symbol markup typo:
 
@@ -220,7 +71,7 @@ git push
 
 I received an email when my contribution got accepted and then merged which was a great feeling! Now the process is more clear to me, and I can start working on more complex issues.
 
-# **2. Authorization Code Flow**
+# <a id=authorization-code-flow> **2. Authorization Code Flow** </a>
 
 This week I got to learn about the Authorization Code Flow, which is a way to authorize a user to access a resource. The idea is that an user needed to authenticate with an spotify account, so I won't have to store the user's credentials in my application. The flow goes like this:
 
@@ -237,17 +88,17 @@ The flow can be represented as a sequence diagram:
 ```mermaid
 sequenceDiagram
     participant Application
-    participant SpotifyAccountsService
+    participant Spotify Accounts Service
     participant User
-    participant SpotifyAPI
-    Application->>SpotifyAccountsService: GET /authorize?client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&scope=SCOPE
-    SpotifyAccountsService->>User: Redirect to login
-    User->>SpotifyAccountsService: Logs in and authorizes access
-    SpotifyAccountsService->>Application: Redirect to REDIRECT_URI with code=AUTHORIZATION_CODE&status=SUCCESS
-    Application->>SpotifyAccountsService: POST /api/token with client_id, client_secret, grant_type, code, redirect_uri
-    SpotifyAccountsService->>Application: Responds with access_token and refresh_token
-    Application->>SpotifyAPI: GET /resource with access_token
-    SpotifyAPI->>Application: Responds with data
+    participant Spotify Web API
+    Application->>Spotify Accounts Service: GET /authorize?client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&scope=SCOPE
+    Spotify Accounts Service->>User: Asks to login
+    User->>Spotify Accounts Service: Logs in and authorizes access
+    Spotify Accounts Service->>Application: Redirect to REDIRECT_URI with code=AUTHORIZATION_CODE&status=SUCCESS
+    Application->>Spotify Accounts Service: POST /api/token with client_id, client_secret, grant_type, code, redirect_uri
+    Spotify Accounts Service->>Application: Responds with access_token and refresh_token
+    Application->>Spotify Web API: GET /resource with access_token
+    Spotify Web API->>Application: Responds with data
 ```
 
 I implemented the `auth` command in the Music Advisor project, which starts an HTTP server that listens for incoming requests. When the user confirms or rejects the authorization, the server returns the following text to the browser:
@@ -259,7 +110,7 @@ After the code is received, the server shuts down and I get the `access_token` b
 
 This is not the first time I've worked with OAuth2, but it's the first time I've implemented the Authorization Code Flow, and it was a great learning experience to know how it works behind the scenes.
 
-# **3. Music Advisor Project**
+# <a id=music-advisor-project> **3. Music Advisor Project** </a>
 
 I've been working on the Music Advisor project, a Java CLI application that uses the Spotify API to recommend music to the user. The project has the following functional requirements:
 
@@ -345,4 +196,4 @@ The most challenging part of the project was to implement pagination, because I 
 
 I'm looking forward to refactoring the project using a command line framework like "picocli" or "Spring Shell/CLI", because I think it would make the code more readable and maintainable. Also I had troubles with implementing the my own server and client for the Authorization Code Flow, especially with managing Threads and waiting for the authorization code, I would like to explore something like "Spring Web" for that or "Micronaut" to follow best practices and avoid reinventing the wheel.
 
-My main takeaways from this project is that "over abstraction" is something that Java lures you into, and is something to keep an eye on. I also learned that it turns out that the business logic code is significantly smaller that the "plumbing" code (like the HTTP server, the HTTP client, the pagination, the cache, etc), and that's why I think a framework would help me to focus on the business logic and not on the plumbing.
+My main takeaways from this project is that **"over abstraction"** is something that Java lures you into, and is something to keep an eye on. I also learned that it turns out that the **business logic code is significantly smaller that the "plumbing" code** (like the HTTP server, the HTTP client, the pagination, the cache, etc), and that's why I think a framework would help me to focus on the business logic and not on the plumbing.
