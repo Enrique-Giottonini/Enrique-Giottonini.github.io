@@ -40,7 +40,14 @@ cd eclipse-collections
 git remote add upstream
 ```
 
-5. I removed the unnecessary ‘_’ in the table and added a ‘_’ to the word ‘groupBy’ using vim.
+5. Synced my fork with the upstream repo:
+
+```bash
+git fetch --all
+git pull upstream master --rebase
+```
+
+6. I removed the unnecessary ‘_’ in the table and added a ‘_’ to the word ‘groupBy’ using vim.
 
 ```diff
 - *peek(*int count*)*
@@ -52,22 +59,22 @@ git remote add upstream
 + *groupBy*
 ```
 
-6. I committed the changes to fork; the signoff is the same account (using `gh auth login`) in which I signed the step one agreement.
+7. I committed the changes to fork; the signoff is the same account (using `gh auth login`) in which I signed the step one agreement.
 
 ```bash
 git add .
 git commit --message "Fix bold markup typos in reference guide" --signoff
 ```
 
-7. Repeated step five, with no merging conflicts (obviously and thankfully).
+8. Repeated step 5, with no merging conflicts (obviously and thankfully).
 
 ```bash
 git push
 ```
 
-8. Used the GitHub GUI for making a PR from my fork.
+9. Used the GitHub GUI for making a PR from my fork.
 
-9. Waited for review.
+10. Waited for review.
 
 I received an email when my contribution got accepted and then merged which was a great feeling! Now the process is more clear to me, and I can start working on more complex issues.
 
